@@ -4,7 +4,7 @@ namespace YassenTrick\SizePlayer;
 
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
-use pocketmine\event\player\{PlayerJoinEvent, PlayerRespawnEvent};;
+use pocketmine\event\player\{PlayerJoinEvent, PlayerRespawnEvent};
 
 class SizePlayer extends PluginBase implements Listener {
 
