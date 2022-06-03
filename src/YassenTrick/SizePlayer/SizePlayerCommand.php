@@ -19,7 +19,7 @@ class SizePlayerCommand extends Command implements PluginOwned{
 		parent::__construct("size", "Change your player size!");
 	}
 
-	public function execute(CommandSender $sender, string $label, array $args): bool{
+	public function execute(CommandSender $sender, string $label, array $args){
 		if(!$sender instanceof Player){
 			$sender->sendMessage(TF::RED."This command only works in-game");
 			return true;
