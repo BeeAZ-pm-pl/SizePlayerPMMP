@@ -2,11 +2,13 @@
 declare(strict_types=1);
 namespace YassenTrick\SizePlayer;
 
-use pocketmine\{plugin\Plugin, Player};
-use pocketmine\command\{Command, CommandSender, PluginIdentifiableCommand};
+use pocketmine\player\Player;
+use pocketmine\plugin\PluginOwned;
+use pocketmine\command\{Command, CommandSender};
 use pocketmine\utils\TextFormat as TF;
+use YassenTrick\SizePlayer\SizePlayer;
 
-class SizePlayerCommand extends Command implements PluginIdentifiableCommand{
+class SizePlayerCommand extends Command implements PluginOwned{
 
 	/** var SizePlayer */
 	private $plugin;
@@ -54,7 +56,7 @@ class SizePlayerCommand extends Command implements PluginIdentifiableCommand{
 		return true;
 	}
 
-	public function getPlugin(): Plugin{
+	public function getOwningPlugin(): SizePlayer{
 		return $this->plugin;
 	}
 }
